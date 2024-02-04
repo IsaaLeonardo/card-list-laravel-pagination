@@ -30,11 +30,33 @@
             }
 
             .recharge-icon {
+                position: relative;
                 background-color: rgb(60 134 94);
             }
             
             .travel-icon {
+                position: relative;
                 background-color: rgb(167 75 75);
+            }
+
+            .vertical-line {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 5px;
+                height: 60%;
+                background-color: #fff;
+            }
+
+            .horizontal-line {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+                height: 5px;
+                background-color: #fff;
             }
 
             .transaction-amount {
@@ -56,11 +78,12 @@
                     <div class="transaction-icon">
                         @if ($card->recharge)
                             <div class="recharge-icon">
-
+                                <div class="vertical-line"></div>
+                                <div class="horizontal-line"></div>
                             </div>
                         @else
                             <div class="travel-icon">
-
+                                <div class="horizontal-line"></div>
                             </div>
                         @endif
                     </div>
