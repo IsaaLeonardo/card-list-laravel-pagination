@@ -14,7 +14,7 @@ class CardsController extends Controller
     public function index()
     {
         return view('cards.index', [
-            'cards' => Card::orderBy('created_at', 'desc')->paginate(20),
+            'cards' => Card::orderBy('created_at', 'desc')->paginate(10),
         ]);
     }
 

@@ -62,6 +62,7 @@
             .transaction-amount {
                 margin-left: auto;
                 font-size: 25px;
+                font-weight: bold;
             }
 
             .transaction-info-station {
@@ -79,6 +80,23 @@
                 margin: 0;
                 margin-block-end: 10px;
             }
+
+            .green-text {
+                color: rgb(60 134 94);
+            }
+
+            .red-text {
+                color: rgb(167 75 75);
+            }
+
+            .shadow {
+                box-shadow: 0 9px 10px -10px #00000082;
+                -webkit-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
+                -moz-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
+                background-color: var(--blanco);
+                padding: 4rem;
+                border-radius: 1.2rem;
+            }
         </style>
     </head>
     <body>
@@ -91,7 +109,7 @@
 
         <ul class="transactions-list">
             @foreach ($cards as $card)
-                <li class="transaction">
+                <li class="transaction shadow">
                     <div class="transaction-icon">
                         @if ($card->recharge)
                             <div class="recharge-icon">
@@ -117,7 +135,9 @@
                     </div>
 
                     <div class="transaction-amount">
-                        <p>Bs. {{ $card->mount }}</p>
+                        <p class="{{ $card->recharge ? 'green-text' : 'red-text' }}">
+                            Bs. {{ $card->mount }}
+                        </p>
                     </div>
                 </li>
             @endforeach
