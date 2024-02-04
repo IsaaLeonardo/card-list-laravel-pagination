@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -12,7 +13,9 @@ class CardsController extends Controller
      */
     public function index()
     {
-        return view('cards.index');
+        return view('cards.index', [
+            'cards' => Card::orderBy('created_at', 'desc')->paginate(20),
+        ]);
     }
 
     /**

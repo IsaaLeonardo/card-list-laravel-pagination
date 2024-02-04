@@ -7,5 +7,12 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        @foreach ($cards as $card)
+            <div>
+                <h2>{{ $card->station }}</h2>
+            </div>
+        @endforeach
+
+        {{ $cards->links() }}
     </body>
 </html>
