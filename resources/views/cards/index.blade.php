@@ -61,6 +61,23 @@
 
             .transaction-amount {
                 margin-left: auto;
+                font-size: 25px;
+            }
+
+            .transaction-info-station {
+                display: inline-block;
+                padding: 5px;
+                color: black;
+                background-color: #ffff8b;
+                border-radius: 10px;
+                margin: 0;
+            }
+
+            .transaction-info-date {
+                font-weight: bold;
+                font-size: 20px;
+                margin: 0;
+                margin-block-end: 10px;
             }
         </style>
     </head>
