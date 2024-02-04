@@ -15,8 +15,8 @@
 
             li.transaction {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
+                gap: 10px;
                 padding: 10px;
                 margin-bottom: 10px;
                 border: 1px solid;
@@ -35,6 +35,10 @@
             
             .travel-icon {
                 background-color: rgb(167 75 75);
+            }
+
+            .transaction-amount {
+                margin-left: auto;
             }
         </style>
     </head>
