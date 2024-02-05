@@ -9,7 +9,7 @@
             ul.transactions-list {
                 list-style: none;
                 padding: 0;
-                max-width: 500px;
+                max-width: 750px;
                 margin: 0 auto;
             }
 
@@ -17,10 +17,14 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid;
+                padding: 40px;
+                margin-bottom: 20px;
                 border-radius: 25px;
+
+                box-shadow: 0 9px 10px -10px #00000082;
+                -webkit-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
+                -moz-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
+                background-color: #f5f5f5;
             }
 
             .transaction-icon > * {
@@ -87,15 +91,6 @@
 
             .red-text {
                 color: rgb(167 75 75);
-            }
-
-            .shadow {
-                box-shadow: 0 9px 10px -10px #00000082;
-                -webkit-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
-                -moz-box-shadow: 0px 9px 10px -10px rgba(0,0,0,.51);
-                background-color: var(--blanco);
-                padding: 4rem;
-                border-radius: 1.2rem;
             }
         </style>
     </head>
